@@ -1,0 +1,67 @@
+import java.io.FileWriter; 
+import java.io.IOException; 
+public class writefile {
+  
+    
+
+        private static final long MEGABYTE = 1024L * 1024L;
+    
+        public static long bytesToMegabytes(long bytes) {
+            return bytes / MEGABYTE;
+        }
+        
+        public boolean Writefile(){
+            try {
+                FileWriter Writer
+                    = new FileWriter("myfile.txt");
+                Writer.write(
+                    "Files in Java are seriously good!!");
+                Writer.close();
+                System.out.println("Successfully written.");
+            }
+            catch (IOException e) {
+                System.out.println("An error has occurred.");
+                e.printStackTrace();
+            }
+            return true;
+        }
+            
+                
+        
+        public static void main(String[] args)throws Exception {
+            
+                long startTime = System.nanoTime();
+    
+        
+               
+               
+                
+          
+               
+                writefile h=new writefile();
+                    System.out.println("Result : ");
+                    System.out.println(h.Writefile());
+                    System.out.println();
+                    Runtime runtime = Runtime.getRuntime();
+                    // Run the garbage collector
+                    runtime.gc();
+                    // Calculate the used memory
+                    long memory = runtime.totalMemory() - runtime.freeMemory();
+                    System.out.println("Used memory is bytes: " + memory);
+                    System.out.println("Used memory is megabytes: "
+                            + bytesToMegabytes(memory));
+                   
+                  
+                long endTime = System.nanoTime();
+                long execution = (endTime - startTime);
+                System.out.println("execution time: "+execution+"ns");
+                
+               
+        
+                } 
+        }
+    
+    
+    
+    
+

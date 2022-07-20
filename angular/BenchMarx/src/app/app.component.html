@@ -1,0 +1,40 @@
+
+<mat-drawer-container class ="example-container ">
+
+  <mat-drawer #drawer class="example-sidenav"mode="side">
+   
+      <app-sidebar></app-sidebar>
+
+    
+    </mat-drawer>
+<div class="content">
+    <div class="toolbar">
+        
+          
+           <mat-toolbar #toolbar class="example-text"> 
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()" (click)="Onclick()" *ngIf="button1">
+              <mat-icon [ngStyle]="{'color':'white'}">menu</mat-icon>
+            </button>  
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with close icon" (click)="drawer.toggle()" (click)="Onclick()" *ngIf="button2">
+              <mat-icon [ngStyle]="{'color':'white'}">close</mat-icon>
+            </button> 
+
+       <!-- <button mat-icon-button [routerLink]="'/form-table'" class="contact1" >
+            <img class="image" src="assets/Images/logo5.jpg"  alt="" aria-hidden="true" style="width:45px;height:30px" data-atf="true">
+            </button> -->
+        
+          <button class="example-text" (click)="drawer.toggle()" (click)="Onclick()">
+          <span><h1 style="color:#eee8ea;font-family: Times New Roman, Cambria, and Garamond;font-size: 25px;" *ngIf="showTitle">BenchMarx</h1></span> 
+          </button>
+          </mat-toolbar> 
+          </div>
+        
+
+        <div class = "graph">
+        <router-outlet></router-outlet>
+          </div>
+       
+    
+</div>  
+
+  </mat-drawer-container>

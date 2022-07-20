@@ -1,0 +1,7 @@
+{
+    "java.jdt.l.vmarg": "-XX:+UeParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveizePolicyWeight=90 -Dun.zip.diableMemoryMapping=true -Xmx2G -Xm100m",
+    "java.project.ourcePath": [
+        "Java/Array",
+        "Java/Operation/ArithmeticOperator"
+    ]
+}
